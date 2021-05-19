@@ -6,7 +6,7 @@ namespace TRAINING
     {
         static void PrintingEx()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World! ");
         }
 
         static void DeclareVar()
