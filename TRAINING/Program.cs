@@ -66,6 +66,7 @@ namespace TRAINING
             int i = 1;
             int fact = 1;
            
+
             while (i<=n1)
             {
                 fact = fact * i;
