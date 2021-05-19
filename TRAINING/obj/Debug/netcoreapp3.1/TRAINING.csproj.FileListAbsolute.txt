@@ -1,0 +1,13 @@
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\bin\Debug\netcoreapp3.1\TRAINING.exe
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\bin\Debug\netcoreapp3.1\TRAINING.deps.json
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\bin\Debug\netcoreapp3.1\TRAINING.runtimeconfig.json
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\bin\Debug\netcoreapp3.1\TRAINING.runtimeconfig.dev.json
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\bin\Debug\netcoreapp3.1\TRAINING.dll
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\bin\Debug\netcoreapp3.1\TRAINING.pdb
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\obj\Debug\netcoreapp3.1\TRAINING.csprojAssemblyReference.cache
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\obj\Debug\netcoreapp3.1\TRAINING.AssemblyInfoInputs.cache
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\obj\Debug\netcoreapp3.1\TRAINING.AssemblyInfo.cs
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\obj\Debug\netcoreapp3.1\TRAINING.csproj.CoreCompileInputs.cache
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\obj\Debug\netcoreapp3.1\TRAINING.dll
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\obj\Debug\netcoreapp3.1\TRAINING.pdb
+C:\Users\RAVIKUMAR\source\repos\TRAINING\TRAINING\obj\Debug\netcoreapp3.1\TRAINING.genruntimeconfig.cache
