@@ -221,7 +221,7 @@ namespace TRAINING
             Console.WriteLine("print natural numbers upto.. ?   enter number");
             int limit = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("natural numbers are : ");
-
+           
             while (one <= limit)
             {
 
@@ -231,7 +231,150 @@ namespace TRAINING
         }
 
 
-            static void Main(string[] args)
+        class day3
+        {
+            public static void EvenOddEx()
+            {
+                int number = 46;
+                int check = number % 2;
+                if (check == 0)
+                {
+                    Console.WriteLine("given number is even");
+                }
+                else
+                    Console.WriteLine("given number is odd");
+            }
+
+            public static void WovelEx()
+            {
+                Console.WriteLine("Enter any character only");
+                char alphabet = Convert.ToChar(Console.ReadLine());
+                if (alphabet >= 0 || alphabet < 0)
+                {
+                    Console.WriteLine("you entered wrong value");
+                }
+                else if (alphabet == 'a' || alphabet == 'A' || alphabet == 'e' || alphabet == 'E' || alphabet == 'i' || alphabet == 'I' || alphabet == 'o' || alphabet == 'O' || alphabet == 'u' || alphabet == 'U')
+                {
+                    Console.WriteLine("given aplhabet is wovel");
+                }
+                else
+                    Console.WriteLine("given alphbet is not wovel ");
+            }
+
+
+            public static void PosiveOrNegativeEx()
+            {
+                Console.WriteLine("Enter any number");
+                int number = Convert.ToInt32(Console.ReadLine());
+                if (number == 0)
+                {
+                    Console.WriteLine("given number is zero");
+                }
+                else if (number > 0)
+                {
+                    Console.WriteLine(number + "  is positive");
+                }
+                else
+                    Console.WriteLine(number + "  is negative");
+            }
+
+            public static void AlphabetOrNotEx()
+            {
+                Console.WriteLine("Enter any character");
+                char value = Convert.ToChar(Console.ReadLine());
+                if (value >= 'a' && value <= 'z' || value <= 'A' && value >= 'Z')
+                {
+                    Console.WriteLine(value + " is alphabet");
+                }
+                else
+                    Console.WriteLine(value + " is not alphabet  ");
+            }
+
+            public static void MultiplicatioNnumEx()
+            {
+                int i = 1;
+                Console.WriteLine("enter any number to get its table");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("multiplication of " + num);
+                int a = 10;
+                while (i <= a)
+                {
+
+                    Console.WriteLine(num + "*" + i + "=" + num * i);
+                    i++;
+                }
+            }
+
+            public static void EvenNoEx()
+            {
+                Console.WriteLine("print even numbers upto... enter number");
+                int upto = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Even numbers upto: " + upto + " are");
+                int i;
+                int check;
+                for (i = 0; i <= upto; i++)
+                {
+                    check = i % 2;
+                    if (check == 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+
+                }
+            }
+
+            public static void OddNoEx()
+            {
+                Console.WriteLine("print Odd numbers upto... enter number");
+                int upto = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Odd numbers upto: " + upto + " are");
+                int i;
+                int check;
+                for (i = 0; i <= upto; i++)
+                {
+                    check = i % 2;
+                    if (check != 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+
+                }
+            }
+
+            public static void MultiOf2Ex()
+            {
+                int table = 2;
+                int i = 1;
+                Console.WriteLine("multiplication table of " + table);
+                int a = 10;
+                while (i <= a)
+                {
+
+                    Console.WriteLine(table + "*" + i + "=" + table * i);
+                    i++;
+                }
+            }
+
+
+            public static void LeapYearEx()
+            {
+
+                Console.WriteLine("Enter Year : ");
+                int Year = Convert.ToInt32(Console.ReadLine());
+                if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
+                {
+                    Console.WriteLine(" is a Leap Year.", Year);
+                }
+                else
+                    Console.WriteLine(" is not a Leap year");
+            }
+        }
+
+
+
+
+
+        static void Main(string[] args)
         {
             PrintingEx();
             DeclareVar();
@@ -248,6 +391,20 @@ namespace TRAINING
             MaxOfTwo();
             MaxOfThree();
             NaturalNnumEx();
+
+            //day3
+            day3 eveodd = new day3();
+            day3.EvenOddEx();
+            day3.WovelEx();
+            day3.PosiveOrNegativeEx();
+            day3.AlphabetOrNotEx();
+            day3.MultiplicatioNnumEx();
+            day3.EvenNoEx();
+            day3.OddNoEx();
+            day3.MultiOf2Ex();
+            day3.LeapYearEx();
+
+
         }
     }
 }
