@@ -370,40 +370,271 @@ namespace TRAINING
             }
         }
 
+        class day4
+        {
+            public static void SumOfNatEx()
+            {
+                int a = 1;
+                Console.WriteLine("enter number to get sum upto that number");
+                int limit = Convert.ToInt32(Console.ReadLine());
+                //Console.WriteLine("natural numbers are : ");
+                int sum = 0;
+                while (a <= limit)
+                {
+
+                    Console.Write(a+ "+");
+                    sum = sum + a;
+
+                   a++;
+                }
+                Console.WriteLine("");
+
+                Console.WriteLine("sum of natural numbers are : ");
+                Console.WriteLine(sum);
+            }
+
+             public static void FactorsEx()
+            {
+                Console.WriteLine("enter a number");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("the factors of " + num + " are : ");
+                int i;
+                for(i=1;i<=num;i++)
+                {
+                    if(num%i==0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+
+
+            public static void GcdEx()
+            {
+                int i;
+                int gcd=0;
+
+                Console.WriteLine("Enter two integers: ");
+                int n1 = Convert.ToInt32(Console.ReadLine());
+                int n2 = Convert.ToInt32(Console.ReadLine());
+
+                for (i = 1; i <= n1 && i <= n2; i++)
+                {
+                 
+                    if (n1 % i == 0 && n2 % i == 0)
+                        gcd = i;
+                }
+
+                Console.WriteLine("the gcd of "+n1+" and "+n2+ " is "+ gcd);
+            }
+
+
+            public static void LcdEx()
+            {
+                int i;
+                int gcd = 0;
+                int lcd;
+
+                Console.WriteLine("Enter two integers: ");
+                int n1 = Convert.ToInt32(Console.ReadLine());
+                int n2 = Convert.ToInt32(Console.ReadLine());
+
+                for (i = 1; i <= n1 && i <= n2; i++)
+                {
+               
+                    if (n1 % i == 0 && n2 % i == 0)
+                        gcd = i;
+                }
+                lcd = (n1 * n2) / gcd;
+
+                Console.WriteLine("the lcd of " + n1 + " and " + n2 + " is " + lcd);
+            }
+
+
+            public static void AreaOfCircle()
+            {
+                Console.WriteLine("enter radius of the circle");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int area = (22 / 7) * a * a;
+                Console.WriteLine("area of the circle is : "+ area);
+            }
+
+
+            public static void AreaOfRectangle()
+            {
+                Console.WriteLine("enter length of rectangle");
+                int length = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter width of rectangle");
+                int width = Convert.ToInt32(Console.ReadLine());
+                int area =  length * width;
+                Console.WriteLine("area of the rectangle is : " + area);
+            }
+
+            public static void StringConcat()
+            {
+                string a = "Hi";
+                string b = "Iam santhosh";
+                string c = "from warangal";
+               
+                string d = string.Concat( a,", ",b," ",c);
+                string e = a + ", " + b +" "+ c;
+                Console.WriteLine(d);
+                Console.WriteLine(e);
+
+
+            }
+
+
+            public static void NumOfDigits()
+            {
+                
+                int i = 0;
+                Console.WriteLine("enter any number");
+                int num = Convert.ToInt32(Console.ReadLine());
+                while (num != 0)
+                {
+                    num = num / 10;
+                    
+                    i++;
+                }
+                Console.WriteLine(i);
+            }
+
+            public static void MarksAndAverage()
+            {
+                Console.WriteLine("enter roll number");
+                int rollnum = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter marks of 1st subject");
+                int m1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter marks of 2nd subject");
+                int m2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter marks of 3rd subject");
+                int m3 = Convert.ToInt32(Console.ReadLine());
+                int total = m1 + m2 + m3;
+                int avg = total / 3;
+                Console.WriteLine("total marks for above subjects are : " + total);
+                Console.WriteLine("marks average is : " + avg);
+            }
+
+            public static void Sort()
+            {
+             
+                Console.WriteLine("enter any three numbers");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int b = Convert.ToInt32(Console.ReadLine());
+                int c = Convert.ToInt32(Console.ReadLine());
+                if ((a >= b) && (a >= c))
+                {
+                    if (b >= c)
+                    {
+                        Console.WriteLine(" Descending order : "+ a+" "+ b+" "+ c);
+                        Console.WriteLine(" Ascending order : "+ c+" " + b+" "+ a);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descending order  : "+ a+" "+ c+" "+ b);
+                        Console.WriteLine("Ascending order : "+ b+" "+c+" "+ a);
+                    }
+                }
+                else if ((b >= a) && (b >= c))
+                {
+                    if (a >= c)
+                    {
+                        Console.WriteLine("Descending order : "+ b+ " "+ a+" "+ c);
+                        Console.WriteLine("Ascending order : "+ c+ " " + a+" "+ b);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descending order : "+ b+" "+ c+" "+ a);
+                        Console.WriteLine("Ascending order : "+ a+" "+ c+" "+ b);
+                    }
+                }
+                else if ((c >= a) && (c >= b))
+                {
+                    if (a >= b)
+                    {
+                        Console.WriteLine("Descending order : "+ c+" "+ a+" "+ b);
+                        Console.WriteLine("Ascending order : "+ b+" "+ a+" "+ c);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Descending order : "+ c+" "+ b+" " +a);
+                        Console.WriteLine("Ascending order : "+ a+" "+ b+" "+ c);
+                    }
+                }
+
+
+
+            }
+
+            public static void ReverseArr()
+            {
+                int i = 5;
+                int[] arr = new int[i];
+                
+                
+                Console.WriteLine("Enter 5 elements: ");
+                for(i = 0; i <arr.Length; i++)
+                {
+                   arr[i] = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine("elements in reverse order: ");
+                for (i = arr.Length - 1; i >= 0; i--)
+                {
+                    Console.WriteLine(" " + arr[i]);
+                }
+            }
+
+
+
+        }
+
 
 
 
 
         static void Main(string[] args)
         {
-            PrintingEx();
-            DeclareVar();
-            GreatOfThree();
-            RevOfNum();
-            SumOfTwo();
-            FactEx();
-            PalendromeEx();
-            SwapTwo();
-            PrimeEx();
-            NaturalEx();
-            InputCalculationsEx();
-            OneInputCalculationsEx();
-            MaxOfTwo();
-            MaxOfThree();
-            NaturalNnumEx();
+            /*  PrintingEx();
+              DeclareVar();
+              GreatOfThree();
+              RevOfNum();
+              SumOfTwo();
+              FactEx();
+              PalendromeEx();
+              SwapTwo();
+              PrimeEx();
+              NaturalEx();
+              InputCalculationsEx();
+              OneInputCalculationsEx();
+              MaxOfTwo();
+              MaxOfThree();
+              NaturalNnumEx();
 
-            //day3
-            day3 eveodd = new day3();
-            day3.EvenOddEx();
-            day3.WovelEx();
-            day3.PosiveOrNegativeEx();
-            day3.AlphabetOrNotEx();
-            day3.MultiplicatioNnumEx();
-            day3.EvenNoEx();
-            day3.OddNoEx();
-            day3.MultiOf2Ex();
-            day3.LeapYearEx();
+              //day3
+              day3 eveodd = new day3();
+              day3.EvenOddEx();
+              day3.WovelEx();
+              day3.PosiveOrNegativeEx();
+              day3.AlphabetOrNotEx();
+              day3.MultiplicatioNnumEx();
+              day3.EvenNoEx();
+              day3.OddNoEx();
+              day3.MultiOf2Ex();
+              day3.LeapYearEx(); */
 
+            //day4
+            day4.SumOfNatEx();
+            day4.FactorsEx();
+            day4.GcdEx();
+            day4.LcdEx();
+            day4.AreaOfCircle();
+            day4.AreaOfRectangle();
+            day4.StringConcat();
+            day4.NumOfDigits();
+            day4.MarksAndAverage();
+            day4.Sort();
+            day4.ReverseArr();
 
         }
     }
