@@ -580,7 +580,7 @@ namespace TRAINING
                 }
                 Console.WriteLine("elements in reverse order: ");
                 for (i = arr.Length - 1; i >= 0; i--)
-                {
+                { 
                     Console.WriteLine(" " + arr[i]);
                 }
             }
@@ -588,6 +588,135 @@ namespace TRAINING
 
 
         }
+         
+        class day5
+        {
+            public static void SumOfDigits()
+            {
+                Console.WriteLine("enter any number");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int i = 0;
+                int temp = 0;
+                while(a>0)
+                {
+                    temp =temp + (a % 10);
+                    a = a / 10;
+                    i++;
+                   
+                }
+                Console.WriteLine("Sum of the digits of entered number : "+temp);
+            }
+
+            public static void BinaryTriangle()
+            {
+                int n = 4;
+                int row, col;
+
+                for (row = 0; row < 10; row++)
+                {
+                    for (col = 0; col <= row; col++)
+                    {
+                        if (((row + col) % 2) == 0)
+                            Console.Write("0");
+                        else
+                            Console.Write("1");
+
+                        Console.Write("");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            public static void CountOnes()
+            {
+                Console.WriteLine("enter any number");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int i =0;
+                int c;
+                int f = 0;
+                while(a>0)
+                {
+                    c = a % 10;
+                    if (c == 1)
+                    {
+                        f = f + 1;
+                    }
+                   a= a / 10;
+                    i++;
+                }
+                Console.WriteLine(f+"khkjhkh");
+            }
+
+            public static void Arr()
+            {
+                
+                
+                int[] array = { 1, 2, 3, 4, 5 };
+                foreach (int i in array)
+                {
+                    Console.Write(" "+i);
+                }
+            }
+
+            public static void ArrRev()
+            {
+                int[] array = { 1, 2, 3, 4, 5 };
+                foreach (int i in array)
+                {
+                    Console.Write(" " + i);
+                }
+                int j;
+                Console.WriteLine("");
+
+               Console.WriteLine("elements in reverse order: ");
+                for (j = array.Length - 1; j >= 0; j--)
+                {
+                    Console.WriteLine(" " + array[j]);
+                }
+            }
+
+            public static void DivideOfTwo()
+            {
+                int num1 = 12, num2 = 23;
+                int divide = num2 / num1;
+                Console.WriteLine("num1 = " + num1);
+                Console.WriteLine("num2 = " + num2);
+                Console.WriteLine("divide of num1 and num2 is = " + divide);
+
+
+            }
+            public static void multi()
+            {
+                Console.WriteLine("enter 1st number");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter 2nd number");
+                int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter 3rd number");
+                int c = Convert.ToInt32(Console.ReadLine());
+                int multip = a * b * c;
+                
+                Console.WriteLine("multiplication of three num are: " + multip);
+            }
+
+
+            public static void averag()
+            {
+                Console.WriteLine("enter 1st number");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter 2nd number");
+                int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter 3rd number");
+                int c = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter 4th number");
+                int d = Convert.ToInt32(Console.ReadLine());
+                int total = a + b + c + d;
+                int avg = total / 4;
+                Console.WriteLine("average of 4 num are: " +avg);
+            }
+        }
+        
 
 
 
@@ -621,7 +750,7 @@ namespace TRAINING
               day3.EvenNoEx();
               day3.OddNoEx();
               day3.MultiOf2Ex();
-              day3.LeapYearEx(); */
+              day3.LeapYearEx(); 
 
             //day4
             day4.SumOfNatEx();
@@ -634,7 +763,16 @@ namespace TRAINING
             day4.NumOfDigits();
             day4.MarksAndAverage();
             day4.Sort();
-            day4.ReverseArr();
+            day4.ReverseArr();*/
+            //day5
+            // day5.SumOfDigits();
+            // day5.BinaryTriangle();
+            // day5.CountOnes();
+            //day5.Arr();
+            // day5.ArrRev();
+            //day5.DivideOfTwo();
+            //day5.multi();
+            day5.averag();
 
         }
     }
