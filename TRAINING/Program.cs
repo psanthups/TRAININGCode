@@ -612,7 +612,7 @@ namespace TRAINING
                 int n = 4;
                 int row, col;
 
-                for (row = 0; row < 10; row++)
+                for (row = 0; row < n; row++)
                 {
                     for (col = 0; col <= row; col++)
                     {
@@ -716,6 +716,115 @@ namespace TRAINING
                 Console.WriteLine("average of 4 num are: " +avg);
             }
         }
+
+        class day6
+        {
+            public static void ArrRev2()
+            {
+                string ar = "programmer";
+
+                int j;
+               
+                
+                Console.WriteLine(ar);
+
+               Console.WriteLine("string in reverse order: ");
+                for (j = ar.Length - 1; j >= 0; j--)
+                {
+
+                    Console.Write(ar[j]);
+                    
+                }
+                Console.WriteLine("");
+            }
+
+
+            public static void BinaryTriangleEndZeros()
+            {
+                int n = 4;
+                int row, col;
+
+                for (row = 0; row < n; row++)
+                {
+                    for (col = 0; col <= row; col++)
+                    {
+                        if (((row + col) % 2) == 0)
+                            Console.Write("1");
+                        else
+                            Console.Write("0");
+
+                        Console.Write("");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            public static void RightangleTriangleIncreseOrder()
+            {
+                int n = 4;
+                int row, col;
+
+                for (row = 0; row < n; row++)
+                {
+                    for (col = 0; col <= row; col++)
+                    {
+                        
+                            Console.Write("*");
+
+                        Console.Write(" ");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
+
+
+            public static void rightangleTriangleDecreaseOrder()
+            {
+                int n = 4;
+                int row, col;
+
+                for (row = n; row > 0; row--)
+                {
+                    for (col = row-1; col > 0; col--)
+                    {
+
+                        Console.Write("*");
+                        Console.Write(" ");
+                    }
+
+                    Console.WriteLine();
+                }
+
+            }
+
+
+            public static void pyramid()
+            {
+                int n = 4;
+                int i, j, k, l;
+                for (i = 1; i <= n; i++)
+                {
+                    for (j = 1; j <= n - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (k = 1; k <= i; k++)
+                    {
+                        Console.Write(k);
+                    }
+                    for (l = i - 1; l >= 1; l--)
+                    {
+                        Console.Write(l);
+                    }
+
+                        Console.WriteLine(" ");
+                }
+            }
+           
+        }
         
 
 
@@ -772,7 +881,13 @@ namespace TRAINING
             // day5.ArrRev();
             //day5.DivideOfTwo();
             //day5.multi();
-            day5.averag();
+            //day5.averag();
+            day6.BinaryTriangleEndZeros();
+            day6.ArrRev2();
+            day6.RightangleTriangleIncreseOrder();
+            day6.rightangleTriangleDecreaseOrder();
+            day6.pyramid();
+
 
         }
     }
