@@ -825,6 +825,77 @@ namespace TRAINING
             }
            
         }
+
+        class day7
+        {
+            public static void Calculation()
+            {
+                int x, y, z, cal1, cal2;
+
+                Console.WriteLine("enter x value");
+                x = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter y value");
+                y = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter z value");
+                z = Convert.ToInt32(Console.ReadLine());
+                cal1 = (x + y) * z;
+                cal2 = (x * y) + (y * z);
+                Console.WriteLine("the value of (x + y) * z  is : " + cal1);
+                Console.WriteLine("the value of (x * y)+(y * z)  is : " + cal2);
+            }
+
+            public static void Row()
+            {
+                Console.WriteLine("enter x value");
+                int x = Convert.ToInt32(Console.ReadLine());
+                int i, j;
+                for (i = 0; i < 4; i++)
+                {
+                    Console.Write(x + " ");
+
+
+                }
+                Console.WriteLine("");
+                for (j = 0; j < 4; j++)
+                {
+                    Console.Write(x);
+
+                }
+                Console.WriteLine("");
+            }
+
+            public static void ChangeRow()
+            {
+                Console.WriteLine("enter a  value");
+                int y = Convert.ToInt32(Console.ReadLine());
+                int i = 0;
+                int j = 0;
+                while (i < 4)
+                {
+                    Console.Write(y + " ");
+                    i++;
+
+                }
+                Console.WriteLine("");
+                while (j < 4)
+                {
+                    Console.Write(y);
+                    j++;
+                }
+                Console.WriteLine("");
+            }
+
+            public static void CheckTrue()
+            {
+                Console.WriteLine("enter x value");
+                int x = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter y  value");
+                int y = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("if one value is posive and another nagative then it returns \"true\"");
+                Console.WriteLine("");
+                Console.WriteLine((x > 0 && y < 0) ? ("true") : ((x < 0 && y > 0) ? "true" : "false"));
+            }
+        }
         
 
 
@@ -882,13 +953,17 @@ namespace TRAINING
             //day5.DivideOfTwo();
             //day5.multi();
             //day5.averag();
-            day6.BinaryTriangleEndZeros();
+            //day6
+            /*day6.BinaryTriangleEndZeros();
             day6.ArrRev2();
             day6.RightangleTriangleIncreseOrder();
             day6.rightangleTriangleDecreaseOrder();
-            day6.pyramid();
-
-
+            day6.pyramid();*/
+            //day7
+            day7.Calculation();
+            day7.Row();
+            day7.ChangeRow();
+            day7.CheckTrue(); 
         }
     }
 }
