@@ -896,8 +896,124 @@ namespace TRAINING
                 Console.WriteLine((x > 0 && y < 0) ? ("true") : ((x < 0 && y > 0) ? "true" : "false"));
             }
         }
-        
+        class day8
+        {
+            public static void GapAndNoGap()
+            {
+                int a;
 
+                Console.WriteLine("Enter a digit: ");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.Write(a + " " + a + " " + a + " " + a);
+                Console.WriteLine("");
+                Console.Write(a + "" + a + "" + a + "" + a);
+                Console.WriteLine("");
+                Console.WriteLine("{0} {0} {0} {0}", a);
+                Console.WriteLine("{0}{0}{0}{0}", a);
+
+            }
+
+
+            public static void LineGap()
+            {
+                Console.WriteLine("Enter a digit: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.Write(num + " " + num + " " + num + " " + num);
+                Console.WriteLine("");
+                Console.Write(num + "" + num + "" + num + "" + num);
+                Console.WriteLine("");
+                Console.WriteLine("{0} {0} {0} {0}", num);
+                Console.WriteLine("{0}{0}{0}{0}", num);
+
+            }
+
+
+            public static void Rectangle()
+            {
+
+                Console.Write("Enter a digit: ");
+                string b = Console.ReadLine();
+
+                for (int c = 1; c <= 5; c++)
+                {
+                    if (c > 1 && c < 5)
+                    {
+                        Console.WriteLine(b + " " + b);
+                    }
+                    else
+                    {
+                        Console.WriteLine(b + b + b);
+                    }
+                }
+            }
+
+
+             public static void NumCheck()
+             {
+                Console.WriteLine("Enter a number: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                if (num > 80 && num < 120)
+                 {
+                    Console.WriteLine("Your number is within 20 of 100");
+                 }
+                 else if (num > 180 && num < 220)
+                 {
+                      Console.WriteLine("Your number is within 20 of 200");
+                 }
+                 else
+                 {
+                      Console.WriteLine("Your number is NOT within 20 of either 100 or 200");
+                 }
+             }
+
+            public static void CheckEqual()
+            {
+                int x, y;
+
+
+                Console.WriteLine("\nInput an integer:");
+                x = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Input another integer:");
+                y = Convert.ToInt32(Console.ReadLine());
+                if ((x + y == 20) || x == 20 || y == 20)
+                    Console.WriteLine(true);
+                else
+                    Console.WriteLine(false);
+            }
+
+
+
+            public static void AddArr()
+            {
+                const int n = 5;
+
+
+
+                int[] a = new int[n] { 5, 10, 20, 25, 50 };
+
+                int[] b = new int[n] { 5, 4, 3, 2, 1 };
+
+                int[] arr = new int[n];
+
+                for (int i = 0, j = 0; i < a.Length; i++, j++)
+
+                {
+
+                    arr[i] = a[i] * b[j];
+
+                }
+
+                for (int i = 0; i < arr.Length; i++)
+
+                {
+
+                    Console.Write(arr[i] + " ");
+
+                }
+            }
+        }
+
+    
 
 
 
@@ -960,10 +1076,17 @@ namespace TRAINING
             day6.rightangleTriangleDecreaseOrder();
             day6.pyramid();*/
             //day7
-            day7.Calculation();
+            /*day7.Calculation();
             day7.Row();
-            day7.ChangeRow();
-            day7.CheckTrue(); 
+            day7.ChangeRow();*/
+            //day7.CheckTrue();
+            //day8
+            day8.GapAndNoGap();
+            day8.LineGap();
+            day8.Rectangle();
+            day8.NumCheck();
+            day8.AddArr();
+            day8.CheckEqual();
         }
     }
 }
