@@ -21,13 +21,13 @@ namespace TRAINING
         {
             int a = 12, b = 15, c = 11;
             if (a >= b && a >= c)
-            
+
                 Console.WriteLine(a + " is the greatest number");
-            
+
             else if (b >= a && b >= c)
-            
+
                 Console.WriteLine(b + " is the greatest number");
-            
+
             else
                 Console.WriteLine(b + " is the greatest number");
         }
@@ -38,14 +38,14 @@ namespace TRAINING
             int Reverse = 0;
             Console.WriteLine(number);
 
-            while (number>0)
+            while (number > 0)
             {
                 int temp;
                 temp = number % 10;
                 Reverse = Reverse * 10 + temp;
                 number = number / 10;
             }
-           
+
             Console.WriteLine("reverse of given number is " + Reverse);
         }
 
@@ -65,21 +65,21 @@ namespace TRAINING
             int n1 = 5;
             int i = 1;
             int fact = 1;
-           
 
-            while (i<=n1)
+
+            while (i <= n1)
             {
                 fact = fact * i;
                 i++;
-                
+
             }
             Console.WriteLine(" n1 = " + n1);
-            Console.WriteLine("factorial of n1 = " + fact); 
+            Console.WriteLine("factorial of n1 = " + fact);
         }
 
         static void PalendromeEx()
         {
-            int givenNum= 4554;
+            int givenNum = 4554;
             int ReverseNum = 0;
             Console.WriteLine("given number = " + givenNum);
             int hold = givenNum;
@@ -93,9 +93,9 @@ namespace TRAINING
 
             Console.WriteLine("reverse of given number is " + ReverseNum);
             if (hold == ReverseNum)
-            
+
                 Console.WriteLine(" hence number is a palendrome");
-            
+
             else
                 Console.WriteLine("hence number is not a palendrome");
         }
@@ -104,7 +104,7 @@ namespace TRAINING
         {
             int integer1 = 10, integer2 = 5;
             int temp = 0;
-           Console.WriteLine("before swaping integer1 =  " + integer1+ " and integer2 = " + integer2);
+            Console.WriteLine("before swaping integer1 =  " + integer1 + " and integer2 = " + integer2);
             temp = integer1;
             integer1 = integer2;
             integer2 = temp;
@@ -117,7 +117,7 @@ namespace TRAINING
             int numberIs = 9;
             int j = 2;
             int term = 0;
-            while(j<numberIs)
+            while (j < numberIs)
             {
                 if (numberIs % j == 0)
                 {
@@ -125,13 +125,13 @@ namespace TRAINING
                     term = 1;
                     break;
                 }
-               
+
                 j++;
-                
+
             }
             if (term == 0)
                 Console.WriteLine("given number is a prime");
-           
+
         }
 
         static void NaturalEx()
@@ -221,7 +221,7 @@ namespace TRAINING
             Console.WriteLine("print natural numbers upto.. ?   enter number");
             int limit = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("natural numbers are : ");
-           
+
             while (one <= limit)
             {
 
@@ -382,10 +382,10 @@ namespace TRAINING
                 while (a <= limit)
                 {
 
-                    Console.Write(a+ "+");
+                    Console.Write(a + "+");
                     sum = sum + a;
 
-                   a++;
+                    a++;
                 }
                 Console.WriteLine("");
 
@@ -393,15 +393,15 @@ namespace TRAINING
                 Console.WriteLine(sum);
             }
 
-             public static void FactorsEx()
+            public static void FactorsEx()
             {
                 Console.WriteLine("enter a number");
                 int num = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("the factors of " + num + " are : ");
                 int i;
-                for(i=1;i<=num;i++)
+                for (i = 1; i <= num; i++)
                 {
-                    if(num%i==0)
+                    if (num % i == 0)
                     {
                         Console.WriteLine(i);
                     }
@@ -412,7 +412,7 @@ namespace TRAINING
             public static void GcdEx()
             {
                 int i;
-                int gcd=0;
+                int gcd = 0;
 
                 Console.WriteLine("Enter two integers: ");
                 int n1 = Convert.ToInt32(Console.ReadLine());
@@ -420,12 +420,12 @@ namespace TRAINING
 
                 for (i = 1; i <= n1 && i <= n2; i++)
                 {
-                 
+
                     if (n1 % i == 0 && n2 % i == 0)
                         gcd = i;
                 }
 
-                Console.WriteLine("the gcd of "+n1+" and "+n2+ " is "+ gcd);
+                Console.WriteLine("the gcd of " + n1 + " and " + n2 + " is " + gcd);
             }
 
 
@@ -441,7 +441,7 @@ namespace TRAINING
 
                 for (i = 1; i <= n1 && i <= n2; i++)
                 {
-               
+
                     if (n1 % i == 0 && n2 % i == 0)
                         gcd = i;
                 }
@@ -456,7 +456,7 @@ namespace TRAINING
                 Console.WriteLine("enter radius of the circle");
                 int a = Convert.ToInt32(Console.ReadLine());
                 int area = (22 / 7) * a * a;
-                Console.WriteLine("area of the circle is : "+ area);
+                Console.WriteLine("area of the circle is : " + area);
             }
 
 
@@ -466,7 +466,7 @@ namespace TRAINING
                 int length = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("enter width of rectangle");
                 int width = Convert.ToInt32(Console.ReadLine());
-                int area =  length * width;
+                int area = length * width;
                 Console.WriteLine("area of the rectangle is : " + area);
             }
 
@@ -475,9 +475,9 @@ namespace TRAINING
                 string a = "Hi";
                 string b = "Iam santhosh";
                 string c = "from warangal";
-               
-                string d = string.Concat( a,", ",b," ",c);
-                string e = a + ", " + b +" "+ c;
+
+                string d = string.Concat(a, ", ", b, " ", c);
+                string e = a + ", " + b + " " + c;
                 Console.WriteLine(d);
                 Console.WriteLine(e);
 
@@ -487,17 +487,17 @@ namespace TRAINING
 
             public static void NumOfDigits()
             {
-                
+
                 int i = 0;
                 Console.WriteLine("enter any number");
                 int num = Convert.ToInt32(Console.ReadLine());
                 while (num != 0)
                 {
                     num = num / 10;
-                    
+
                     i++;
                 }
-                Console.WriteLine(i);
+                Console.WriteLine("thee number has "+i+" digits");
             }
 
             public static void MarksAndAverage()
@@ -518,7 +518,7 @@ namespace TRAINING
 
             public static void Sort()
             {
-             
+
                 Console.WriteLine("enter any three numbers");
                 int a = Convert.ToInt32(Console.ReadLine());
                 int b = Convert.ToInt32(Console.ReadLine());
@@ -527,39 +527,39 @@ namespace TRAINING
                 {
                     if (b >= c)
                     {
-                        Console.WriteLine(" Descending order : "+ a+" "+ b+" "+ c);
-                        Console.WriteLine(" Ascending order : "+ c+" " + b+" "+ a);
+                        Console.WriteLine(" Descending order : " + a + " " + b + " " + c);
+                        Console.WriteLine(" Ascending order : " + c + " " + b + " " + a);
                     }
                     else
                     {
-                        Console.WriteLine("Descending order  : "+ a+" "+ c+" "+ b);
-                        Console.WriteLine("Ascending order : "+ b+" "+c+" "+ a);
+                        Console.WriteLine("Descending order  : " + a + " " + c + " " + b);
+                        Console.WriteLine("Ascending order : " + b + " " + c + " " + a);
                     }
                 }
                 else if ((b >= a) && (b >= c))
                 {
                     if (a >= c)
                     {
-                        Console.WriteLine("Descending order : "+ b+ " "+ a+" "+ c);
-                        Console.WriteLine("Ascending order : "+ c+ " " + a+" "+ b);
+                        Console.WriteLine("Descending order : " + b + " " + a + " " + c);
+                        Console.WriteLine("Ascending order : " + c + " " + a + " " + b);
                     }
                     else
                     {
-                        Console.WriteLine("Descending order : "+ b+" "+ c+" "+ a);
-                        Console.WriteLine("Ascending order : "+ a+" "+ c+" "+ b);
+                        Console.WriteLine("Descending order : " + b + " " + c + " " + a);
+                        Console.WriteLine("Ascending order : " + a + " " + c + " " + b);
                     }
                 }
                 else if ((c >= a) && (c >= b))
                 {
                     if (a >= b)
                     {
-                        Console.WriteLine("Descending order : "+ c+" "+ a+" "+ b);
-                        Console.WriteLine("Ascending order : "+ b+" "+ a+" "+ c);
+                        Console.WriteLine("Descending order : " + c + " " + a + " " + b);
+                        Console.WriteLine("Ascending order : " + b + " " + a + " " + c);
                     }
                     else
                     {
-                        Console.WriteLine("Descending order : "+ c+" "+ b+" " +a);
-                        Console.WriteLine("Ascending order : "+ a+" "+ b+" "+ c);
+                        Console.WriteLine("Descending order : " + c + " " + b + " " + a);
+                        Console.WriteLine("Ascending order : " + a + " " + b + " " + c);
                     }
                 }
 
@@ -571,16 +571,16 @@ namespace TRAINING
             {
                 int i = 5;
                 int[] arr = new int[i];
-                
-                
+
+
                 Console.WriteLine("Enter 5 elements: ");
-                for(i = 0; i <arr.Length; i++)
+                for (i = 0; i < arr.Length; i++)
                 {
-                   arr[i] = Convert.ToInt32(Console.ReadLine());
+                    arr[i] = Convert.ToInt32(Console.ReadLine());
                 }
                 Console.WriteLine("elements in reverse order: ");
                 for (i = arr.Length - 1; i >= 0; i--)
-                { 
+                {
                     Console.WriteLine(" " + arr[i]);
                 }
             }
@@ -588,7 +588,7 @@ namespace TRAINING
 
 
         }
-         
+
         class day5
         {
             public static void SumOfDigits()
@@ -597,14 +597,14 @@ namespace TRAINING
                 int a = Convert.ToInt32(Console.ReadLine());
                 int i = 0;
                 int temp = 0;
-                while(a>0)
+                while (a > 0)
                 {
-                    temp =temp + (a % 10);
+                    temp = temp + (a % 10);
                     a = a / 10;
                     i++;
-                   
+
                 }
-                Console.WriteLine("Sum of the digits of entered number : "+temp);
+                Console.WriteLine("Sum of the digits of entered number : " + temp);
             }
 
             public static void BinaryTriangle()
@@ -633,30 +633,30 @@ namespace TRAINING
             {
                 Console.WriteLine("enter any number");
                 int a = Convert.ToInt32(Console.ReadLine());
-                int i =0;
+                int i = 0;
                 int c;
                 int f = 0;
-                while(a>0)
+                while (a > 0)
                 {
                     c = a % 10;
                     if (c == 1)
                     {
                         f = f + 1;
                     }
-                   a= a / 10;
+                    a = a / 10;
                     i++;
                 }
-                Console.WriteLine(f+"khkjhkh");
+                Console.WriteLine(f + "this is the count");
             }
 
             public static void Arr()
             {
-                
-                
+
+
                 int[] array = { 1, 2, 3, 4, 5 };
                 foreach (int i in array)
                 {
-                    Console.Write(" "+i);
+                    Console.Write(" " + i);
                 }
             }
 
@@ -670,7 +670,7 @@ namespace TRAINING
                 int j;
                 Console.WriteLine("");
 
-               Console.WriteLine("elements in reverse order: ");
+                Console.WriteLine("elements in reverse order: ");
                 for (j = array.Length - 1; j >= 0; j--)
                 {
                     Console.WriteLine(" " + array[j]);
@@ -696,7 +696,7 @@ namespace TRAINING
                 Console.WriteLine("enter 3rd number");
                 int c = Convert.ToInt32(Console.ReadLine());
                 int multip = a * b * c;
-                
+
                 Console.WriteLine("multiplication of three num are: " + multip);
             }
 
@@ -713,27 +713,27 @@ namespace TRAINING
                 int d = Convert.ToInt32(Console.ReadLine());
                 int total = a + b + c + d;
                 int avg = total / 4;
-                Console.WriteLine("average of 4 num are: " +avg);
+                Console.WriteLine("average of 4 num are: " + avg);
             }
         }
 
         class day6
         {
-            public static void ArrRev2()
+            public static void StringRev2()
             {
                 string ar = "programmer";
 
                 int j;
-               
-                
+
+
                 Console.WriteLine(ar);
 
-               Console.WriteLine("string in reverse order: ");
+                Console.WriteLine("string in reverse order: ");
                 for (j = ar.Length - 1; j >= 0; j--)
                 {
 
                     Console.Write(ar[j]);
-                    
+
                 }
                 Console.WriteLine("");
             }
@@ -770,8 +770,8 @@ namespace TRAINING
                 {
                     for (col = 0; col <= row; col++)
                     {
-                        
-                            Console.Write("*");
+
+                        Console.Write("*");
 
                         Console.Write(" ");
                     }
@@ -788,7 +788,7 @@ namespace TRAINING
 
                 for (row = n; row > 0; row--)
                 {
-                    for (col = row-1; col > 0; col--)
+                    for (col = row - 1; col > 0; col--)
                     {
 
                         Console.Write("*");
@@ -820,10 +820,10 @@ namespace TRAINING
                         Console.Write(l);
                     }
 
-                        Console.WriteLine(" ");
+                    Console.WriteLine(" ");
                 }
             }
-           
+
         }
 
         class day7
@@ -948,23 +948,23 @@ namespace TRAINING
             }
 
 
-             public static void NumCheck()
-             {
+            public static void NumCheck()
+            {
                 Console.WriteLine("Enter a number: ");
                 int num = Convert.ToInt32(Console.ReadLine());
                 if (num > 80 && num < 120)
-                 {
+                {
                     Console.WriteLine("Your number is within 20 of 100");
-                 }
-                 else if (num > 180 && num < 220)
-                 {
-                      Console.WriteLine("Your number is within 20 of 200");
-                 }
-                 else
-                 {
-                      Console.WriteLine("Your number is NOT within 20 of either 100 or 200");
-                 }
-             }
+                }
+                else if (num > 180 && num < 220)
+                {
+                    Console.WriteLine("Your number is within 20 of 200");
+                }
+                else
+                {
+                    Console.WriteLine("Your number is NOT within 20 of either 100 or 200");
+                }
+            }
 
             public static void CheckEqual()
             {
@@ -1011,13 +1011,160 @@ namespace TRAINING
 
                 }
             }
+
         }
 
-    
+        class day9
+        {
+            public static void StringToLower()
+            {
+                Console.Write("Enter a word to display in lower case : ");
+                string v = Console.ReadLine();
+                Console.WriteLine(v.ToLower());
+            }
+
+            public static void MaxWordInSentence()
+            {
+                Console.Write("Enter a word to display in lower case : ");
+                string sentence = Console.ReadLine();
+                var arr = sentence.Split(" ");
+
+                var longest = arr[0];
+
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (arr[i].Length > longest.Length)
+                    {
+                        longest = arr[i];
+                    }
+                }
+
+                Console.WriteLine(longest + "  is longest word in sentence");
+
+            }
+
+
+            public static void ReverseWords()
+            {
+                Console.Write("Enter a sentence : ");
+                string sentence = Console.ReadLine();
+                var arr = sentence.Split(" ");
+                for (int i = (arr.Length - 1); i >= 0; i--)
+                {
+                    Console.Write(arr[i]+" ");
+                }
+
+
+            }
+
+            public static void Insertion()
+            {
+                int[] arr = new int[5] { 44, 12, 84, 34, 60 };
+                int i;
+                Console.WriteLine("The Array is :");
+                for (i = 0; i < 5; i++)
+                {
+                    Console.WriteLine(arr[i]);
+                }
+                insertsort(arr, 5);
+                Console.WriteLine("The Sorted Array is :");
+                for (i = 0; i < 5; i++)
+                    Console.WriteLine(arr[i]);
+                Console.ReadLine();
+            
+              static void insertsort(int[] data, int n)
+              {
+                int i, j;
+                 for (i = 1; i < n; i++)
+                 {
+                    int item = data[i];
+                    int ins = 0;
+                    for (j = i - 1; j >= 0 && ins != 1;)
+                    {
+                        if (item < data[j])
+                        {
+                            data[j + 1] = data[j];
+                            j--;
+                            data[j + 1] = item;
+                        }
+                        else ins = 1;
+                    }
+                 }
+              }
+            }
+
+            public static void BubleSort()
+            {
+                int[] a = { 20, 40, 50, 10, 45 };
+                int t;
+                Console.WriteLine("The Array is : ");
+                for (int i = 0; i < a.Length; i++)
+                {
+                    Console.WriteLine(a[i]);
+                }
+                for (int j = 0; j <= a.Length - 2; j++)
+                {
+                    for (int i = 0; i <= a.Length - 2; i++)
+                    {
+                        if (a[i] > a[i + 1])
+                        {
+                            t = a[i + 1];
+                            a[i + 1] = a[i];
+                            a[i] = t;
+                        }
+                    }
+                }
+                Console.WriteLine("The Sorted Array :");
+                foreach (int aray in a)
+                    Console.Write(aray + " ");
+                Console.ReadLine();
+            }
+
+
+            public static void Selection()
+            {
+                int array_size = 10;
+                int[] array = new int[10] { 14, 65, 20, 49, 18, 68, 80, 75, 90, 30 };
+                Console.WriteLine("The Array Before Selection Sort is: ");
+                for (int i = 0; i < array_size; i++)
+                {
+                    Console.WriteLine(array[i]);
+                }
+                int tmp, min_key;
+
+                for (int j = 0; j < array_size - 1; j++)
+                {
+                    min_key = j;
+
+                    for (int k = j + 1; k < array_size; k++)
+                    {
+                        if (array[k] < array[min_key])
+                        {
+                            min_key = k;
+                        }
+                    }
+
+                    tmp = array[min_key];
+                    array[min_key] = array[j];
+                    array[j] = tmp;
+                }
+
+                Console.WriteLine("The Array After Selection Sort is: ");
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine(array[i]);
+                }
+                Console.ReadLine();
+            }
+          
+            
+                
+            
+        
 
 
 
-
+        }
         static void Main(string[] args)
         {
             /*  PrintingEx();
@@ -1047,8 +1194,7 @@ namespace TRAINING
               day3.OddNoEx();
               day3.MultiOf2Ex();
               day3.LeapYearEx(); 
-
-            //day4
+              //day4
             day4.SumOfNatEx();
             day4.FactorsEx();
             day4.GcdEx();
@@ -1064,14 +1210,14 @@ namespace TRAINING
             // day5.SumOfDigits();
             // day5.BinaryTriangle();
             // day5.CountOnes();
-            //day5.Arr();
+            // day5.Arr();
             // day5.ArrRev();
             //day5.DivideOfTwo();
             //day5.multi();
             //day5.averag();
             //day6
             /*day6.BinaryTriangleEndZeros();
-            day6.ArrRev2();
+            day6.String Rev2();
             day6.RightangleTriangleIncreseOrder();
             day6.rightangleTriangleDecreaseOrder();
             day6.pyramid();*/
@@ -1081,12 +1227,24 @@ namespace TRAINING
             day7.ChangeRow();*/
             //day7.CheckTrue();
             //day8
-            day8.GapAndNoGap();
-            day8.LineGap();
-            day8.Rectangle();
-            day8.NumCheck();
-            day8.AddArr();
-            day8.CheckEqual();
+            /* day8.GapAndNoGap();
+             day8.LineGap();
+             day8.Rectangle();
+             day8.NumCheck();
+             day8.AddArr();
+             day8.CheckEqual();*/
+            //day9
+            // day9.StringToLower();
+            //day9.MaxWordInSentence();
+            //day9.ReverseWords();
+            //day9.Insertion();
+            //day9.BubleSort();
+            day9.Selection();
+
+
+
+
         }
+            
     }
 }
