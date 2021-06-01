@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace TRAINING
 {
@@ -1051,7 +1053,7 @@ namespace TRAINING
                 var arr = sentence.Split(" ");
                 for (int i = (arr.Length - 1); i >= 0; i--)
                 {
-                    Console.Write(arr[i]+" ");
+                    Console.Write(arr[i] + " ");
                 }
 
 
@@ -1071,26 +1073,26 @@ namespace TRAINING
                 for (i = 0; i < 5; i++)
                     Console.WriteLine(arr[i]);
                 Console.ReadLine();
-            
-              static void insertsort(int[] data, int n)
-              {
-                int i, j;
-                 for (i = 1; i < n; i++)
-                 {
-                    int item = data[i];
-                    int ins = 0;
-                    for (j = i - 1; j >= 0 && ins != 1;)
+
+                static void insertsort(int[] data, int n)
+                {
+                    int i, j;
+                    for (i = 1; i < n; i++)
                     {
-                        if (item < data[j])
+                        int item = data[i];
+                        int ins = 0;
+                        for (j = i - 1; j >= 0 && ins != 1;)
                         {
-                            data[j + 1] = data[j];
-                            j--;
-                            data[j + 1] = item;
+                            if (item < data[j])
+                            {
+                                data[j + 1] = data[j];
+                                j--;
+                                data[j + 1] = item;
+                            }
+                            else ins = 1;
                         }
-                        else ins = 1;
                     }
-                 }
-              }
+                }
             }
 
             public static void BubleSort()
@@ -1156,15 +1158,92 @@ namespace TRAINING
                 }
                 Console.ReadLine();
             }
-          
-            
-                
+
+        }
+
+
+        class day11
+        {
+
+            public static void itStack()
+            {
+                Stack myStack = new Stack();
+                myStack.Push("Hello");
+                myStack.Push("World");
+                myStack.Push("!...");
+                Console.WriteLine("myStack");
+                Console.WriteLine("Count:  {0}", myStack.Count);
+                Console.Write("Values:  ");
+                PrintValues(myStack);
+
+
+                static void PrintValues(IEnumerable myCollection)
+                {
+                    foreach (Object obj in myCollection)
+                        Console.Write("    {0}", obj);
+                    Console.WriteLine();
+                }
+            }
+
+
+            public static void ItQuae()
+            {
+                Queue myQ = new Queue();
+                myQ.Enqueue("Hello");
+                myQ.Enqueue("World");
+                myQ.Enqueue("!.");
+                Console.WriteLine("");
+                Console.WriteLine("myQ");
+                Console.WriteLine("\tCount:    {0}", myQ.Count);
+                Console.Write("\tValues:");
+                PrintValues(myQ);
+
+
+                static void PrintValues(IEnumerable myCollection)
+                {
+                    foreach (Object obj in myCollection)
+                        Console.Write("    {0}", obj);
+                    Console.WriteLine();
+                }
+
+            }
+
+
+            public static void StackToArray()
+            {
+                Stack<string> numbers = new Stack<string>();
+                numbers.Push("one");
+                numbers.Push("two");
+                numbers.Push("three");
+                numbers.Push("four");
+                numbers.Push("five");
+                foreach (string number in numbers)
+                {
+                    Console.WriteLine(number);
+                }
+
+                Console.WriteLine("\nPopping '{0}'", numbers.Pop());
+                Console.WriteLine("Peek at next item to destack: {0}",
+                    numbers.Peek());
+                Console.WriteLine("Popping '{0}'", numbers.Pop());
+                Stack<string> stack2 = new Stack<string>(numbers.ToArray());
+
+                Console.WriteLine("\nContents of the first copy:");
+                foreach (string number in stack2)
+                {
+                    Console.WriteLine(number);
+                }
+
+            }
+
+        }
+    
             
         
 
 
 
-        }
+        
         static void Main(string[] args)
         {
             /*  PrintingEx();
@@ -1237,9 +1316,13 @@ namespace TRAINING
             // day9.StringToLower();
             //day9.MaxWordInSentence();
             //day9.ReverseWords();
-            //day9.Insertion();
-            //day9.BubleSort();
-            day9.Selection();
+           /* day9.Insertion();
+            day9.BubleSort();
+            day9.Selection();*/
+            // day11
+            day11.itStack();
+            day11.ItQuae();
+            day11.StackToArray();
 
 
 
